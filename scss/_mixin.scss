@@ -1,0 +1,30 @@
+@mixin Display($items,$justify,$gap){
+    display: flex;
+    align-items: $items;
+    justify-content: $justify;
+    gap: $gap;
+}
+@mixin TextStyle($color,$size,$weight,$height,$letter,$bottom){
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $letter;
+    margin-bottom: $bottom;
+    transition: all 0.3s;
+}
+@mixin BtnStyle($padding,$bg-color,$clr,$border,$radius){
+    padding: $padding;
+    background-color: $bg-color;
+    color: $clr;
+    border:$border;
+    border-radius:$radius;
+    font-family: 'Livvic',sans-serif;
+    @include TextStyle($color:$clr-white,$size:18px,$weight:600,$height:28px,$letter:0px,$bottom:0px);
+
+    &:hover{
+        background-color: $clr-white;
+        color: #002529;
+        border-color: $bg-color;
+    }
+}

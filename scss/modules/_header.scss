@@ -1,0 +1,50 @@
+.site-header {
+    padding: 73px 0px 129px;
+}
+.header {
+    @include Display($items:center,$justify:space-between,$gap:0px)
+}
+.header__left-content {
+    @include Display($items:center,$justify:start,$gap:80px)
+}
+.header__navbar {
+     @include Display($items:center,$justify:start,$gap:40px)
+}
+.header__link {
+    @include TextStyle($color:$clr-white,$size:18px,$weight:600,$height:28px,$letter:0px,$bottom:0px);
+    &:hover{
+        color:#F67E7E;
+    }
+}
+.header__btn {
+    @include BtnStyle($padding:10px 32px 10px,$bg-color:transparent,$clr:$clr-white,$border:1px solid $clr-white,$radius:24px)
+}
+.header__menu-icon{
+    display: none;
+    background-color:transparent;
+    border: none;
+}
+@media (max-width:775px){
+    .site-header{
+        padding: 64px 0px 112px;
+    }
+    .header__logo-link>img{
+        width: 127px;
+        height: 32px;
+    }
+    .header__left-content{
+        @include Display($items:center,$justify:start,$gap:40px)
+    }
+}
+@media (max-width:602px){
+    .site-header{
+        padding: 48px 0px 80px;
+    }
+    .header__navbar,.header__btn{
+        display: none;
+    }
+    .header__menu-icon{
+        display: block;
+        background-color: transparent;
+    }
+}

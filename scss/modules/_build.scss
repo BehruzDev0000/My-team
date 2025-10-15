@@ -1,0 +1,51 @@
+.build-section {
+    padding: 140px 0px;
+    background-color: $clr-bg-build;
+    background-image: url('../../images/build-bg-1.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.build {
+    @include Display($items:start,$justify:space-between,$gap:0px)
+}
+.build__title-wrapper {
+    width: 445px;
+}
+.build__line {
+    width: 50px;
+    height: 4px;
+    background-color: $clr-hover;
+    display: block;
+    margin-bottom: 54px;
+}
+.build__title {
+    @include TextStyle($color:$clr-white,$size:48px,$weight:700,$height:48px,$letter:0px,$bottom:0px);
+}
+.build__navbar-wrapper {
+    width: 540px;
+}
+.build__navbar {
+    @include Display($items:start,$justify:start,$gap:32px);
+    flex-direction:column
+}
+.build__navbar-item {
+    @include Display($items:center,$justify:start,$gap:23px);
+}
+.build__navbar-card {
+    width: 445px;
+}
+.build__navbar--card-title {
+    margin-bottom: 16px;
+     @include TextStyle($color:$clr-hover,$size:18px,$weight:700,$height:28px,$letter:0px,$bottom:0px);
+}
+.build__navbar--card-text {
+     @include TextStyle($color:$clr-white,$size:15px,$weight:600,$height:25px,$letter:0px,$bottom:0px);
+}
+@media (max-width:1271px){
+    .build__navbar-card {
+    max-width: 445px;
+}
+ .build__navbar-wrapper{
+    max-width:540px;
+ }
+}
