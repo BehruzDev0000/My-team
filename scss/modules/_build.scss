@@ -2,6 +2,7 @@
     padding: 140px 0px;
     background-color: $clr-bg-build;
     background-image: url('../../images/build-bg-1.svg');
+    background-size: 100px 200px;
     background-repeat: no-repeat;
     background-position: right bottom;
 }
@@ -22,7 +23,7 @@
     @include TextStyle($color:$clr-white,$size:48px,$weight:700,$height:48px,$letter:0px,$bottom:0px);
 }
 .build__navbar-wrapper {
-    width: 540px;
+    max-width: 540px;
 }
 .build__navbar {
     @include Display($items:start,$justify:start,$gap:32px);
@@ -32,7 +33,7 @@
     @include Display($items:center,$justify:start,$gap:23px);
 }
 .build__navbar-card {
-    width: 445px;
+    max-width: 445px;
 }
 .build__navbar--card-title {
     margin-bottom: 16px;
@@ -41,11 +42,53 @@
 .build__navbar--card-text {
      @include TextStyle($color:$clr-white,$size:15px,$weight:600,$height:25px,$letter:0px,$bottom:0px);
 }
-@media (max-width:1271px){
-    .build__navbar-card {
-    max-width: 445px;
+
+@media (max-width:974px){
+    .build-section{
+        padding: 100px 0 100px 74px;
+        background-position: right top;
+    }
+    .build{
+        align-items: start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .build__title-wrapper{
+        width: 90%;
+    }
+    
+   .build__line{
+        margin-bottom: 32px;
+   }
+   .build__title-wrapper{
+        margin-bottom: 64px;
+   }
+   .build__title{
+    font-size: 32px;
+    line-height: 32px;
+   }
+   .build__navbar-item{
+      width: 100%;
+   }
 }
- .build__navbar-wrapper{
-    max-width:540px;
- }
+@media (max-width:531px){
+    .build-section{
+        padding: 64px 0px;
+    }
+    .build__title-wrapper{
+        width: 75%;
+    }
+     .build__title-wrapper{
+        margin-bottom: 56px;
+   }
+   .build__navbar-item{
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+   }
+   .build__navbar--card-title{
+    margin-bottom: 8px;
+   }
 }
