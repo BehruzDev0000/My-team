@@ -1,0 +1,83 @@
+.delivery-section {
+    padding: 140px 0px;
+    background-image: url("./../../images/delivery-bg-1.svg"),url("../../images/delivery-bg-2.svg");
+    background-repeat: no-repeat;
+    background-position: top left ,right bottom;
+    background-size: 147px 100px, 200px 100px;
+}
+.delivery__title-wrapper {
+    max-width: 932px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.delivery__title {
+     @include TextStyle($color:$clr-white,$size:48px,$weight:700,$height:48px,$letter:0px,$bottom:0px);
+}
+.delivery__title--change-color {
+    color: $clr-pink !important;
+}
+.delivery__list {
+     @include Display($items:start,$justify:space-between,$gap:30px)
+}
+.delivery__item {
+    background-image: url("./../../images/delivery-text-bg.svg");
+    background-size: 67px 56px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 36px;
+    text-align: center;
+    width: 350px;
+    @include Display($items:center,$justify:start,$gap:0px);
+    flex-direction: column;
+}
+.delivery__item>p{
+    @include TextStyle($color:$clr-white,$size:15px,$weight:600,$height:25px,$letter:0px,$bottom:24px);
+}    
+.delivery__item>strong{
+      @include TextStyle($color:$clr-pink,$size:18px,$weight:700,$height:28px,$letter:0px,$bottom:2px);
+}
+.delivery__item>i{
+     @include TextStyle($color:$clr-white,$size:13px,$weight:500,$height:18px,$letter:0px,$bottom:32px);
+}
+
+@media (max-width:753px){
+    .delivery-section{
+        padding: 100px 0px;
+    }
+    .delivery__title {
+     @include TextStyle($color:$clr-white,$size:32px,$weight:700,$height:32px,$letter:0px,$bottom:0px);
+}
+    .delivery__title-wrapper {
+        width: 70%;
+        margin-bottom: 48px;
+}
+    .delivery__list {
+     @include Display($items:center,$justify:start,$gap:48px);
+     flex-direction:column;
+}
+    .delivery__item{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .delivery__item>p{
+        margin-bottom: 16px;
+}    
+    .delivery__item>i{
+        margin-bottom: 16px;
+    }
+}
+@media (max-width:500px){
+     .delivery-section{
+        padding: 140px 0px;
+    }
+    .delivery__title-wrapper {
+        width: 100%;
+        margin-bottom: 48px;
+}
+    .delivery__item{
+        width: 100%;
+        margin: 0 auto;
+    }
+}

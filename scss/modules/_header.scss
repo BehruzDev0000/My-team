@@ -13,7 +13,7 @@
 .header__link {
     @include TextStyle($color:$clr-white,$size:18px,$weight:600,$height:28px,$letter:0px,$bottom:0px);
     &:hover{
-        color:#F67E7E;
+        color:$clr-hover;
     }
 }
 .header__btn {

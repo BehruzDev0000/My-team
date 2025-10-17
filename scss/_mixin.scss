@@ -20,11 +20,12 @@
     border:$border;
     border-radius:$radius;
     font-family: 'Livvic',sans-serif;
-    @include TextStyle($color:$clr-white,$size:18px,$weight:600,$height:28px,$letter:0px,$bottom:0px);
+    @include TextStyle($color:$clr,$size:18px,$weight:600,$height:28px,$letter:0px,$bottom:0px);
 
     &:hover{
         background-color: $clr-white;
         color: #002529;
         border-color: $bg-color;
+        cursor: pointer;
     }
 }
